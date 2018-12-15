@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -11785,7 +11784,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="ThomasGiddings.github.io/fi_about_photo_trip_records.png" alt="fi_about_photo_trip_records.png"></p>
+<p><img src="attachment:fi_about_photo_trip_records.png" alt="fi_about_photo_trip_records.png"></p>
 
 </div>
 </div>
@@ -11796,9 +11795,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These libraries contain some basic functionality that we will require to perform an analysis on our data.
 Pandas provides dataframes that function as advanced tables with easy to use lookup and analysis functions.
-Matplotlin is the basis of plotting data in most python implementations.
+Matplotlib is the basis of plotting data in most python implementations.
 Seaborn will allow us to make much more appealing looking and unique kinds of plots.
-numpy is an important arrow and number manipulation library.
+numpy is an important array and number manipulation library.
 Statsmodels will allow us to perform regressions on our data to try to predict values.</p>
 
 </div>
@@ -11806,7 +11805,7 @@ Statsmodels will allow us to perform regressions on our data to try to predict v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[219]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11830,15 +11829,16 @@ Statsmodels will allow us to perform regressions on our data to try to predict v
 <pre><code>                                        #Curating Our Data
 
 </code></pre>
-<p>This data is provided by Amazon via Amazon Web Services, as one of the many datasets available. It is a large amount of data from New York taxis, both Yellow Cab and Green Taxi. This contains information about date and time, start points, end point, fares, tips, distance, and a few other data points.
+<p>This data is provided by Amazon via Amazon Web Services, as one of the many datasets available. It is a large amount of data from New York taxis, both Yellow Cab and Green Taxi. This contains information about date and time, start points, endpoint, fares, tips, distance, and a few other data points.
 We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml">http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml</a></p>
+<p>This data will be collected and processed using Pandas, the documentation for which can be found here: <a href="http://pandas.pydata.org/pandas-docs/stable/">http://pandas.pydata.org/pandas-docs/stable/</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[220]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;yellow_tripdata_2018-06.csv&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">150000</span><span class="p">)</span> 
@@ -11853,7 +11853,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;green_tripdata_2018-06.csv&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">150000</span><span class="p">)</span>
@@ -11875,7 +11875,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[222]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11891,7 +11891,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[183]:</div>
+<div class="prompt output_prompt">Out[222]:</div>
 
 
 
@@ -12047,7 +12047,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[223]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12063,7 +12063,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[184]:</div>
+<div class="prompt output_prompt">Out[223]:</div>
 
 
 
@@ -12240,7 +12240,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[224]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span> <span class="o">=</span> <span class="n">ydata</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="n">ydata</span><span class="o">.</span><span class="n">RatecodeID</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -12256,14 +12256,14 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The current form of the time isn't very convenient for analystical purposes for us, so let's use numpy's datetime to add an additional column containing the total time in seconds of each trip. This new column will assist us in further editing and analysis of our data.</p>
+<p>The current form of the time isn't very convenient for analytical purposes for us, so let's use numpy's datetime to add an additional column containing the total time in seconds of each trip. This new column will assist us in further editing and analysis of our data.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[225]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;time_seconds&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1">#Create a new column</span>
@@ -12280,7 +12280,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[226]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdata</span><span class="p">[</span><span class="s1">&#39;time_seconds&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -12306,7 +12306,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[227]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdata</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -12325,7 +12325,7 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[228]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -12347,14 +12347,14 @@ We will be using the June 2018 data for this tutorial. <a href="http://www.nyc.g
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Using this data, we can also make an analysis based on time.
-Now that we've cleaned our data based on  RatecodID, we don't need the column any more as it will always be 1, making it rather irrelevant.</p>
+Now that we've cleaned our data based on RatecodID, we don't need the column any more as it will always be 1, making it rather irrelevant.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="prompt input_prompt">In&nbsp;[229]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ydata</span> <span class="o">=</span> <span class="n">ydata</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;RatecodeID&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -12368,7 +12368,7 @@ Now that we've cleaned our data based on  RatecodID, we don't need the column an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="prompt input_prompt">In&nbsp;[230]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;tpep_pickup_datetime&#39;</span><span class="p">])</span>
@@ -12405,13 +12405,14 @@ Now that we've cleaned our data based on  RatecodID, we don't need the column an
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>First, let's plot our data as a visualization tool. This allows us to see aspects of our data like skew.
 Let's start with a frequency plot of distance.</p>
+<p>We will be using SeaBorn for most of this section, the documentation can be found here: <a href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="prompt input_prompt">In&nbsp;[231]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;trip_distance&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ydata</span><span class="p">)</span>
@@ -12449,14 +12450,14 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This plot shows us that our data is skewed pretty heavily downwards. However, it is very hard to make out any details and our x-axis labels overlap significantly. To make our plot readable, let's round all of our data to the nearest whole number, rotae our labels, and increase the plot size.</p>
+<p>This plot shows us that our data is skewed pretty heavily downwards. However, it is very hard to make out any details and our x-axis labels overlap significantly. To make our plot readable, let's round all of our data to the nearest whole number, rotate our labels, and increase the plot size.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[193]:</div>
+<div class="prompt input_prompt">In&nbsp;[232]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="c1">#Increase the size</span>
@@ -12504,7 +12505,7 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="prompt input_prompt">In&nbsp;[233]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;trip_distance&#39;</span><span class="p">],</span> <span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;fare_amount&#39;</span><span class="p">])</span>
@@ -12542,7 +12543,7 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that, outside of an outlier, that our data seems to be clustered around a line that increases at a constant rate. This will be important later for our regression of the data, but for now let's just jot that down as a notable feature.</p>
+<p>We can see that, outside of an outlier, that our data seems to be clustered around a line that increases at a constant rate. This will be important later for our regression of the data, but for now, let's just jot that down as a notable feature.</p>
 <p>Let's do the same with total fares and tips paid.</p>
 
 </div>
@@ -12550,7 +12551,7 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="prompt input_prompt">In&nbsp;[234]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;fare_amount&#39;</span><span class="p">],</span> <span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;tip_amount&#39;</span><span class="p">])</span>
@@ -12598,7 +12599,7 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[235]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;trip_distance&#39;</span><span class="p">],</span> <span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;time_seconds&#39;</span><span class="p">])</span>
@@ -12643,7 +12644,7 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="prompt input_prompt">In&nbsp;[236]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">ydata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;trip_distance&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">][</span><span class="s1">&#39;trip_distance&#39;</span><span class="p">],</span> <span class="c1">#Only entries with distance &lt; 200</span>
@@ -12699,14 +12700,14 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Something should strike us as being wrong here. There seems to be rather high distance values associated with low time values on our plot, which may indicate that some of our data might be incorrect. Let's take a look at our speed to get an idea.</p>
+<p>Something should strike us as being wrong here. There seems to be a rather high distance values associated with low time values on our plot, which may indicate that some of our data might be incorrect. Let's take a look at our speed to get an idea.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[237]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1">#Disregard values that are not a number</span>
@@ -12744,16 +12745,16 @@ Let's start with a frequency plot of distance.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Most of our data seems to trend on the "not 250" bucket, which is quite unsurprising, but some speeds seem to be in excess of 1750 miles per hour.
+<p>Most of our data seems to trend in the "less than 250" bucket, which is quite unsurprising, but some speeds seem to be in excess of 1750 miles per hour.
 Unless Yellow Cab has failed to report a driver breaking the land speed record, it seems unlikely that this is an actual speed and not an error.
-Let's trim the data a bit to see more actual speeds.</p>
+Let's trim the data a bit to see more actual speeds, let's be generous and say 60 mph.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ydata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="s1">&#39;speed&#39;</span><span class="p">])</span>
@@ -12791,7 +12792,7 @@ Let's trim the data a bit to see more actual speeds.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that we can see more of our data, it is evident that our data is clustered rather low on this plot. It is heavily skewed towards the low end, and only slightly bumps on the high end. It seems that most taxis in NYC down't get around terribly quickly.</p>
+<p>Now that we can see more of our data, it is evident that our data is clustered rather low on this plot. It is heavily skewed towards the low end, and only slightly bumps on the high end. It seems that most taxis in NYC don't get around terribly quickly. Despite NYC taxis not necessarily having speed governors, I don't imagine they go above the speef of 60 mph often, if at all, while within the city limits.</p>
 
 </div>
 </div>
@@ -12803,14 +12804,14 @@ Let's trim the data a bit to see more actual speeds.</p>
 
 <pre><code>                                             Hypothesis Testing and Analysis
 </code></pre>
-<p>Now that we've cleaned up our data a bit, and taken a good look at it, let's try doing some analysis. For this part, we will mostly being using linear regression to try to perform predictions on various parts of our dataset. For our first analysis, let's try to predict the fare being charged by the taxi service relative to the distance traveled.</p>
+<p>Now that we've cleaned up our data a bit, and taken a good look at it, let's try doing some analysis. For this part, we will mostly be using linear regression to try to perform predictions on various parts of our dataset. For our first analysis, let's try to predict the fare being charged by the taxi service relative to the distance traveled.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;fare_amount&#39;</span><span class="p">])</span> <span class="c1">#Make the y value array</span>
@@ -12828,17 +12829,17 @@ Let's trim the data a bit to see more actual speeds.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that we have a regression fitted, let's make a hypothesis to test. Our hypothesis will be that the relation between these two values is linear. We are tryin to reject the null hypothesos. The null hypothesis, then, will be that the relation is non-linear.</p>
-<p><a href="https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/">https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/</a>
-In order to reject the null hypothesis with a 95% confidence interval, our p-value must be below .05 according to this website,
-so let's check our new model's p-value.</p>
+<p>Now that we have a regression fitted, let's make a hypothesis to test. Our hypothesis will be that the relation between these two values is linear. In order to prove this, we will fit a linear regression using the statsmodels api. We are trying to reject the null hypothesis. The null hypothesis, then, will be that the relation is non-linear.
+the documentation for linear regression in statsmodels is found here: <a href="https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html">https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html</a></p>
+<p>In order to reject the null hypothesis with a 95% confidence interval, our p-value must be below .05 according to this website,
+so let's check our new model's p-value: <a href="https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/">https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regression</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -12854,7 +12855,7 @@ so let's check our new model's p-value.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[201]:</div>
+<div class="prompt output_prompt">Out[240]:</div>
 
 
 
@@ -12874,7 +12875,7 @@ so let's check our new model's p-value.</p>
   <th>Date:</th>             <td>Sat, 15 Dec 2018</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:41:10</td>     <th>  Log-Likelihood:    </th> <td>-4.8682e+05</td>
+  <th>Time:</th>                 <td>15:31:57</td>     <th>  Log-Likelihood:    </th> <td>-4.8682e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>145426</td>      <th>  AIC:               </th>  <td>9.736e+05</td> 
@@ -12930,7 +12931,7 @@ so let's check our new model's p-value.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="prompt input_prompt">In&nbsp;[241]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">regression</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#We can use our regression to predict y with a hypothetical x (0, in this case)</span>
@@ -12974,14 +12975,14 @@ so let's check our new model's p-value.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As expected, this line is a pretty good predictor of fare amounts based on distance traveled.
-For our purposes, though, we would like to determine something a little less obvious. For example, let's try to predict tipping rates. For this, we will do something similar, but comparing fare_amount to tip_amount. This should give us an idea of what percentage of the fare people usually tip! This should be a bit less linear, seeing as how their isn't a meter enforcing a certain rate.</p>
+For our purposes, though, we would like to determine something a little less obvious. For example, let's try to predict tipping rates. For this, we will do something similar, but comparing fare_amount to tip_amount. This should give us an idea of what percentage of the fare people usually tip! This should be a bit less linear, seeing as how there isn't a meter enforcing a certain rate.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;tip_amount&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">145426</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -12997,7 +12998,7 @@ For our purposes, though, we would like to determine something a little less obv
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ytips</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -13013,7 +13014,7 @@ For our purposes, though, we would like to determine something a little less obv
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[204]:</div>
+<div class="prompt output_prompt">Out[243]:</div>
 
 
 
@@ -13033,7 +13034,7 @@ For our purposes, though, we would like to determine something a little less obv
   <th>Date:</th>             <td>Sat, 15 Dec 2018</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:41:10</td>     <th>  Log-Likelihood:    </th> <td>-2.9084e+05</td>
+  <th>Time:</th>                 <td>15:31:57</td>     <th>  Log-Likelihood:    </th> <td>-2.9084e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>145426</td>      <th>  AIC:               </th>  <td>5.817e+05</td> 
@@ -13085,14 +13086,15 @@ For our purposes, though, we would like to determine something a little less obv
 <p>Once again, we can confidently reject the null hypothesis, seeing as how our pvalue is 0.</p>
 <p>Perhaps unsurprisingly, our score has decreased despite us finding that there is a linear relation.
 Unlike fare amounts, there is not an underlying system that's enforcing linearity.
-Let's tak a look at the graph.</p>
+As such, we would expect there not to be as strong of a relation as our previous regression had.
+Let's take a look at the graph.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[244]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">ytips</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13136,7 +13138,7 @@ Let's tak a look at the graph.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Looking at this graph, it's clear why our data is less linear for this problem. There's a strong possibility for outliers, like the $120 tip, and some people simply don't tip.</p>
 <p>While we would normally expect some people not to tip, there is a larger problem here - missing data.</p>
-<p>It is inevitable that data should be missing from a set, but unfortunately this data handles it in a peculiar way.
+<p>It is inevitable that data should be missing from a set, but unfortunately, this data handles it in a peculiar way.
 According to the website, this field is automatically populated with tips made via credit card, but entirely excludes cash tips as they are not tracked.</p>
 <p>This is problematic for us, as this represents data that is Missing at Random, as it is based on payment type.</p>
 <p>We, as analysts, must decide how to handle the problem of missing data.</p>
@@ -13150,7 +13152,7 @@ While some passengers may par the fare with their credit card and the tip with c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nocash</span> <span class="o">=</span> <span class="n">ydata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;payment_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="c1">#Make a set of only credit card users</span>
@@ -13168,7 +13170,7 @@ While some passengers may par the fare with their credit card and the tip with c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nocashtips</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -13184,7 +13186,7 @@ While some passengers may par the fare with their credit card and the tip with c
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[207]:</div>
+<div class="prompt output_prompt">Out[246]:</div>
 
 
 
@@ -13204,7 +13206,7 @@ While some passengers may par the fare with their credit card and the tip with c
   <th>Date:</th>             <td>Sat, 15 Dec 2018</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:41:11</td>     <th>  Log-Likelihood:    </th> <td>-1.8982e+05</td>
+  <th>Time:</th>                 <td>15:31:58</td>     <th>  Log-Likelihood:    </th> <td>-1.8982e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>101334</td>      <th>  AIC:               </th>  <td>3.796e+05</td> 
@@ -13261,7 +13263,7 @@ Let's look at our new graph.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[247]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">nocashtips</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13305,7 +13307,7 @@ Let's look at our new graph.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you can see, removing most of our missing data has increased the accuracy of our predictions.
 Notably, we don't see quite as many false 0s at high fare amounts, probably because most people are not paying with cash for
-very large fares.</p>
+very large fares. These people may be paying very large tips, or none at all, but we can't say for certain with the way the data comes to us.</p>
 
 </div>
 </div>
@@ -13321,7 +13323,7 @@ very large fares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[209]:</div>
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ydata</span><span class="p">[</span><span class="s1">&#39;time_seconds&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">145426</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -13341,7 +13343,7 @@ very large fares.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[209]:</div>
+<div class="prompt output_prompt">Out[248]:</div>
 
 
 
@@ -13361,7 +13363,7 @@ very large fares.</p>
   <th>Date:</th>             <td>Sat, 15 Dec 2018</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:41:11</td>     <th>  Log-Likelihood:    </th> <td>-1.4057e+06</td>
+  <th>Time:</th>                 <td>15:31:59</td>     <th>  Log-Likelihood:    </th> <td>-1.4057e+06</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>145426</td>      <th>  AIC:               </th>  <td>2.811e+06</td> 
@@ -13408,7 +13410,7 @@ very large fares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[210]:</div>
+<div class="prompt input_prompt">In&nbsp;[249]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gdata</span><span class="p">[</span><span class="s1">&#39;time_seconds&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">147257</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -13428,7 +13430,7 @@ very large fares.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[210]:</div>
+<div class="prompt output_prompt">Out[249]:</div>
 
 
 
@@ -13448,7 +13450,7 @@ very large fares.</p>
   <th>Date:</th>             <td>Sat, 15 Dec 2018</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:41:11</td>     <th>  Log-Likelihood:    </th> <td>-1.4894e+06</td>
+  <th>Time:</th>                 <td>15:31:59</td>     <th>  Log-Likelihood:    </th> <td>-1.4894e+06</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>147257</td>      <th>  AIC:               </th>  <td>2.979e+06</td> 
@@ -13497,14 +13499,14 @@ very large fares.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Our overall linearity looks good, as our pvalues allow us to reject the null hypothesis. Let's look at the individual graphs first.</p>
+<p>Our overall linearity looks good, as our pvalues allow us to reject the null hypothesis. Much like the other, this is expected as we know that most people tip as a percentage of the bill. This means that there will be a roughly linear relation between fare and tips. Let's look at the individual graphs.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[250]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">yspeed</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13545,7 +13547,7 @@ very large fares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[212]:</div>
+<div class="prompt input_prompt">In&nbsp;[251]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">gspeed</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13595,7 +13597,7 @@ very large fares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="prompt input_prompt">In&nbsp;[252]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">gspeed</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13640,7 +13642,7 @@ very large fares.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Both of these graphs are also clearly good predictors. 
-Up until this point, we have been focusing only on data from the sets seperately.
+Up until this point, we have been focusing only on data from the sets separately.
 Let's branch out a bit, and try to make some practical conclusions from our regressions.
 For this next section, let's compare the two data sets.
 If, for example, I wanted to travel a certain distance, which service should I call to get a cheaper service?</p>
@@ -13650,7 +13652,7 @@ If, for example, I wanted to travel a certain distance, which service should I c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[214]:</div>
+<div class="prompt input_prompt">In&nbsp;[253]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gdata</span><span class="p">[</span><span class="s1">&#39;fare_amount&#39;</span><span class="p">])</span>
@@ -13666,7 +13668,7 @@ If, for example, I wanted to travel a certain distance, which service should I c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[215]:</div>
+<div class="prompt input_prompt">In&nbsp;[254]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y1</span> <span class="o">=</span> <span class="n">regression</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13711,7 +13713,7 @@ If, for example, I wanted to travel a certain distance, which service should I c
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Based on our regression, we can see that the Green Cab is slightly more expensive for pretty much
 any distance of travel.
-It may be the case that they spend more time in traffic or waiting, as the ticker does go up for time reasons in addition to plain distance.</p>
+It may be the case that they spend more time in traffic or waiting, as the ticker does go up for time reasons in addition to plain distance. This means, in essence, that there is no way this is exactly linear, but is certain to be very close to it.</p>
 <p>Say that instead we're an aspiring taxi driver with a bit of knowledge about data science, and want to see which service to work for based on the tipping patterns.</p>
 
 </div>
@@ -13719,7 +13721,7 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[255]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nocash</span> <span class="o">=</span> <span class="n">gdata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gdata</span><span class="p">[</span><span class="s1">&#39;payment_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
@@ -13769,7 +13771,7 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Based on our models, it seems as though Yellow Cab drivers receive better tips on average, and our data scientist taxi driver should probably choose this company if this is their basis for joining.</p>
+<p>Based on our models, it seems as though Yellow Cab drivers receive better tips on average, and our data scientist taxi driver should probably choose this company if this is their basis for joining. This is mostly a measurement of percentage tips, however, so if Green makes more money overall it may be the case that they end up receiving more tip money in total.</p>
 <p>Finally, let's pretend that we're looking for the faster taxi service because we're in quite a rush.</p>
 
 </div>
@@ -13777,7 +13779,7 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[256]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g1</span> <span class="o">=</span> <span class="n">gspeed</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -13787,6 +13789,7 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="n">g1</span><span class="p">,</span> <span class="n">g2</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13796,19 +13799,6 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[217]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7ff3357b79b0&gt;]</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -13833,7 +13823,7 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Based on this information, it seems that Green Cab is somewhat slower, as tehy take slightly more time to travel the same distance, based on our regressions.</p>
+<p>Based on this information, it seems that Green Cab is somewhat slower, as they take slightly more time to travel the same distance, based on our regressions. This difference definitely picks up as distance increases. It's worth noting that the two seem to primarily serve different areas, so this difference may be a result of traffic differences, frequency of intersections, etc.</p>
 
 </div>
 </div>
@@ -13846,6 +13836,8 @@ It may be the case that they spend more time in traffic or waiting, as the ticke
 <pre><code>                                             Messages and Conclusion
 </code></pre>
 <p>Based on the regressions that we did, it seems as though Yellow cab is a superior service. In each of the comparisons, Yellow cab was cheaper, faster, and gets the driver better tips. On the other hand, there are certainly metrics that were not covered in this tutorial, and you should feel free to explore them as practice.</p>
+<p>This particular tutorial covers the basics of data science using linear regression because of the linear nature of the data. Different methods of analysis for categorical data and non-linear continuous data do exist in statsmodels, which was used for this tutorial, and scikit-learn, the documentation for which can be found here: 
+<a href="https://scikit-learn.org/stable/documentation.html">https://scikit-learn.org/stable/documentation.html</a></p>
 <p>Overall, I hope that this tutorial was useful for you in your journey to become a data scientist!</p>
 
 </div>
